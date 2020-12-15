@@ -1,0 +1,8 @@
+request:
+  method: GET
+  url: /api/movies
+  queryParameters:
+    type:
+      COMEDY
+response:
+  status: 200

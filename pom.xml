@@ -59,7 +59,7 @@
 				<version>${spring-cloud-contract.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<baseClassForTests>mw.cdc.BaseClass</baseClassForTests>
+					<baseClassForTests>mw.cdc.producer.BaseClass</baseClassForTests>
 					<testFramework>JUNIT5</testFramework>
 				</configuration>
 			</plugin>
