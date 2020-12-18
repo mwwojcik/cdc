@@ -1,6 +1,6 @@
 package mw.cdc.producer.infrastructure;
 
-import java.util.UUID;
+import mw.cdc.producer.model.BonusPoints;
 import mw.cdc.producer.service.BonusPointsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/movies")
+@RequestMapping("/api/points")
 public class BonusPointsController {
 
     BonusPointsService bonusPointsService;
@@ -21,8 +21,8 @@ public class BonusPointsController {
     }
 
     @GetMapping
-    public ResponseEntity check(@RequestParam(name = "user") UUID uuid) {
-        return ResponseEntity.ok().build();
+    public ResponseEntity<BonusPoints> check(@RequestParam(name = "user") String user) {
+        return ResponseEntity.ok().body(bonusPointsService.check(user));
     }
 
 }

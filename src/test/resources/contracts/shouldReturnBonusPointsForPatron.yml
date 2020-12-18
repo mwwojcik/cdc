@@ -1,0 +1,12 @@
+request:
+  method: GET
+  url: /api/points
+  queryParameters:
+    user: patron
+response:
+  status: 200
+  headers:
+    Content-Type: application/json
+  body:
+    user: patron
+    amount: 100

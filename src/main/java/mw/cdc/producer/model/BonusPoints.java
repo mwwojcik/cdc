@@ -1,20 +1,22 @@
 package mw.cdc.producer.model;
 
-import java.util.UUID;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 public class BonusPoints {
 
-    private UUID user;
+    private String user;
     private int amount;
 
-    public BonusPoints(UUID user, int amount) {
+    public BonusPoints(String user, int amount) {
         this.user = user;
         this.amount = amount;
     }
 
-    public static BonusPoints from(UUID user, int amount) {
+    public static BonusPoints from(String user, int amount) {
         return new BonusPoints(user, amount);
     }
-
 
 }
