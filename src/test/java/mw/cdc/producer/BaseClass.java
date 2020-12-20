@@ -1,6 +1,7 @@
 package mw.cdc.producer;
 
 import io.restassured.module.mockmvc.RestAssuredMockMvc;
+import mw.cdc.producer.infrastructure.AskMeController;
 import mw.cdc.producer.infrastructure.BonusPointsController;
 import mw.cdc.producer.model.BonusPoints;
 import mw.cdc.producer.service.BonusPointsService;
@@ -13,7 +14,8 @@ public class BaseClass {
 
     @BeforeEach
     public void setup() {
-        RestAssuredMockMvc.standaloneSetup(new BonusPointsController(mockedBonusPointsService()));
+        RestAssuredMockMvc.standaloneSetup(new BonusPointsController(mockedBonusPointsService())
+            ,new AskMeController());
     }
 
     public BonusPointsService mockedBonusPointsService() {

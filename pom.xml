@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>mw</groupId>
-	<artifactId>cdc</artifactId>
+	<artifactId>cdc-producer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cdc</name>
+	<name>cdc-producer</name>
 	<description>Demo project for Consumer Driven Contract (CDS) concept</description>
 
 	<properties>

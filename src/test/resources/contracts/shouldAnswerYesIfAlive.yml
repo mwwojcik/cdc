@@ -1,0 +1,11 @@
+request:
+  method: GET
+  url: /askme
+  queryParameters:
+    question: Are you alive?
+response:
+  status: 200
+  headers:
+    Content-Type: text/plain;charset=ISO-8859-1
+  body:
+    "Yes"
