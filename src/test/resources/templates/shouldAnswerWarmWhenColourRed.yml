@@ -1,0 +1,11 @@
+request:
+  method: GET
+  url: /askmeaboutcolour
+  queryParameters:
+    colour: RED
+response:
+  status: 200
+  headers:
+    Content-Type: text/plain;charset=ISO-8859-1
+  body:
+    "Warm"
