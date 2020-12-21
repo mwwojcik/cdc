@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class AskMeController {
 
     @GetMapping("/askme")
-    public ResponseEntity<String> askMe(@RequestParam(name="question") String question) {
+    public ResponseEntity<String> askMe(@RequestParam(name="question") String question,
+                                        @RequestParam(name="foo") String foo) {
         if (question.equals("Are you alive?")) {
             return ResponseEntity.ok().body("Yes");
         }

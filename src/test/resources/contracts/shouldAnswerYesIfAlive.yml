@@ -3,6 +3,7 @@ request:
   url: /askme
   queryParameters:
     question: Are you alive?
+    foo: foo
 response:
   status: 200
   headers:
