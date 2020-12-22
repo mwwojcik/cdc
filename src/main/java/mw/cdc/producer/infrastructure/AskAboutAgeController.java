@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class AskAboutAgeController {
 
-    @GetMapping("/askmeaboutage")
+    @GetMapping("/askmeaboutagefdfdfd")
     public ResponseEntity<String> askaboutage(@RequestParam(name = "age") int age) {
 
         if (age <= 18) {

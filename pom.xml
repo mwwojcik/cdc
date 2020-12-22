@@ -66,8 +66,15 @@
 				<version>${spring-cloud-contract.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<baseClassForTests>mw.cdc.producer.BaseClass</baseClassForTests>
-					<testFramework>JUNIT5</testFramework>
+					<!-- We want to use the JAR with contracts with the following coordinates -->
+					<contractDependency>
+						<groupId>mw.cdccontracts</groupId>
+						<artifactId>server</artifactId>
+					</contractDependency>
+					<!-- The JAR with contracts should be taken from Maven local -->
+					<contractsMode>LOCAL</contractsMode>
+					<!-- ... additional configuration -->
+					<contractsPath>mw.cdccontracts/server</contractsPath>
 				</configuration>
 			</plugin>
 			<plugin>
