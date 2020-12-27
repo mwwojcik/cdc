@@ -69,10 +69,6 @@
 				<extensions>true</extensions>
 				<configuration>
 					<!-- We want to use the JAR with contracts with the following coordinates -->
-					<!--<contractDependency>
-						<groupId>com.example</groupId>
-						<artifactId>beer-contracts</artifactId>
-					</contractDependency>-->
 					<contractDependency>
 						<groupId>mw</groupId>
 						<artifactId>askmeapi</artifactId>
@@ -81,6 +77,12 @@
 					<contractsMode>LOCAL</contractsMode>
 					<!-- ... additional configuration -->
 				<contractsPath>mw</contractsPath>
+					<baseClassMappings>
+          <baseClassMapping>
+            <contractPackageRegex>.*mw.*</contractPackageRegex>
+            <baseClassFQN>mw.cdc.producer.BaseClass</baseClassFQN>
+          </baseClassMapping>
+        </baseClassMappings>
 				</configuration>
 			</plugin>
 			<plugin>
