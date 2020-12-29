@@ -5,6 +5,7 @@ import mw.cdc.producer.infrastructure.AskAboutAgeController;
 import mw.cdc.producer.infrastructure.AskMeAboutColorController;
 import mw.cdc.producer.infrastructure.AskMeController;
 import mw.cdc.producer.infrastructure.BonusPointsController;
+import mw.cdc.producer.infrastructure.LogicalGateController;
 import mw.cdc.producer.model.BonusPoints;
 import mw.cdc.producer.service.BonusPointsService;
 import org.junit.jupiter.api.BeforeEach;
@@ -17,7 +18,7 @@ public class BaseClass {
     @BeforeEach
     public void setup() {
         RestAssuredMockMvc.standaloneSetup(new BonusPointsController(mockedBonusPointsService())
-            , new AskMeController(), new AskAboutAgeController(), new AskMeAboutColorController());
+            , new AskMeController(), new AskAboutAgeController(), new AskMeAboutColorController(),new LogicalGateController());
     }
 
     public BonusPointsService mockedBonusPointsService() {
