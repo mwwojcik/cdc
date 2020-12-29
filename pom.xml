@@ -17,8 +17,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Hoxton.SR9</spring-cloud.version>
-		<spring-cloud-contract.version>2.2.4.RELEASE</spring-cloud-contract.version>
-		<!--<spring-cloud-contract.version>3.0.1-SNAPSHOT</spring-cloud-contract.version>-->
 	</properties>
 
 
@@ -65,7 +63,6 @@
 			<plugin>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-contract-maven-plugin</artifactId>
-				<version>${spring-cloud-contract.version}</version>
 				<extensions>true</extensions>
 
 				<configuration>
@@ -85,7 +82,6 @@
             <baseClassFQN>mw.cdc.producer.BaseClass</baseClassFQN>
           </baseClassMapping>
         </baseClassMappings>
-					<nameSuffixForTests>Contract</nameSuffixForTests>
 				</configuration>
 			</plugin>
 			<plugin>
